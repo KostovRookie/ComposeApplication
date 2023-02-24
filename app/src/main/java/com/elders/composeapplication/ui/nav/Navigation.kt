@@ -27,7 +27,7 @@ fun SetupNavHost(navController: NavHostController, gameViewModel: GameViewModel)
             HomeScreen(gameViewModel = gameViewModel, navController = navController)
         }
         composable(route = Screens.Detail.route+ "/{$KEY_GAME_ID}") { BackStackEntry ->
-            DetailScreen(id = BackStackEntry.arguments?.getString(KEY_GAME_ID) ?:"1", gameViewModel = gameViewModel, navController = navController)
+            DetailScreen( navController = navController)
         }
     }
 }
